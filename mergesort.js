@@ -8,21 +8,7 @@ function split(wholeArray) {
     var firstHalf = wholeArray.slice(0,wholeArray.length/2);
     var secondHalf = wholeArray.slice(wholeArray.length/2)
     return [firstHalf, secondHalf];
-  }
-
-// function merge(arr1, arr2){
-//     var resultArr = []
-//     function recorrer(arr1, arr2){
-//         if(arr1[0]<arr2[0]) resultArr.push(arr1.shift())
-//         if(arr1[0]>arr2[0]) resultArr.push(arr2.shift())
-//         if(arr1.length === 0 || arr2.length === 0){
-//             return resultArr = resultArr.concat(arr1,arr2)
-//         }
-//         recorrer(arr1,arr2)
-//     }
-//     recorrer(arr1,arr2)
-//     return resultArr
-// }
+}
 
 function merge(arr1, arr2){
     var resultArr = []
@@ -41,19 +27,4 @@ function mergeSort(array){
         var der = mergeSort(split(array)[1])
         return merge(izq, der) 
 }
-        // else{
-        //     return merge(
-        //     (mergeSort(split(array)[0]),
-        //     mergeSort(split(array)[1]))
-        //     ) 
-        // }
-
-// function mergeSort(array){
-//     if(array.length <= 1) return array
-//         else{
-//             return merge(
-//             (mergeSort(split(array)[0]),
-//             mergeSort(split(array)[1]))
-//             ) 
-//         }
-// }
+ 
